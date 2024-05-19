@@ -9,13 +9,13 @@ RESTful APIs using Node.js and Express for Sleep tracker apllication that allows
 After getting the repo locally 
 **Install the Dependencies** by running the command
 
-    ```
+   ```
     npm install
     ```
 
 ## Running the API
 
-1. **Start the Backend Server** by running the command in bash  
+1. **Start the Backend Server** by running the following command in bash  
 
     ```
     node backend/index.js
@@ -25,13 +25,13 @@ After getting the repo locally
 
 ## Running Tests
 
-1. **Navigate to the Test Directory** and run the following command in bash
+1. **Navigate to the Test Directory** using the command
 
     ```
     cd test
     ```
 
-2. **Run the Tests** and run the command
+2. **Run the Tests** using the command
 
     ```
     npm test
