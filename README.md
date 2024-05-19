@@ -1,12 +1,51 @@
-# Sleep Tracker API
 
-The Sleep Tracker API is a RESTful API designed to track sleep records for users.
+# Sleep Tracker
+
+RESTful APIs using Node.js and Express for Sleep tracker apllication that allows a mobile app to store and retrieve user sleep data.
+
+
+## How to setup and run the APIs
+
+After getting the repo locally 
+**Install the Dependencies**
+
+    ```bash
+    npm install
+    ```
+
+## Running the API
+
+1. **Start the Backend Server**
+
+    ```bash
+    node backend/index.js
+    ```
+
+    The server should be running on `http://localhost:3000`.
+
+## Running Tests
+
+1. **Navigate to the Test Directory**
+
+    ```bash
+    cd test
+    ```
+
+2. **Run the Tests**
+
+    ```bash
+    npm test
+    ```
+
+  # Sleep Tracker APIs
+
+The Sleep Tracker APIs are RESTful APIs designed to track sleep records for users.
 
 
 
-## Endpoints
+## User Endpoints
 
-### 1. POST /api/v1/signup
+### 1. POST /api/v1/user/signup
 
 Creates a new user account.
 
@@ -22,7 +61,7 @@ Creates a new user account.
 - `message` (string): Indicates success or failure of the operation.
 - `token` (string): JWT token for authentication.
 
-### 2. POST /api/v1/signin
+### 2. POST /api/v1/user/signin
 
 Logs in an existing user.
 
@@ -36,7 +75,9 @@ Logs in an existing user.
 - `message` (string): Indicates success or failure of the operation.
 - `token` (string): JWT token for authentication.
 
-### 3. POST /api/v1/sleep
+## Sleep Endpoints
+
+### 1. POST /api/v1/sleep
 
 Creates a new sleep record for the authenticated user.
 
@@ -61,7 +102,7 @@ Creates a new sleep record for the authenticated user.
 - `411 Length Required`: Invalid credentials (negative hours).
 - `500 Internal Server Error`: Internal server error.
 
-### 4. GET /api/v1/sleep/:userId
+### 2. GET /api/v1/sleep/:userId
 
 Retrieves sleep records for a specific user.
 
@@ -90,7 +131,7 @@ Retrieves sleep records for a specific user.
 - `401 Unauthorized`: Invalid page credentials.
 - `500 Internal Server Error`: Internal server error.
 
-### 5. DELETE /api/v1/sleep/:recordId
+### 3. DELETE /api/v1/sleep/:recordId
 
 Deletes a sleep record.
 
@@ -113,4 +154,3 @@ Deletes a sleep record.
 
 ---
 
-This README provides a basic overview of how to set up and run the API, as well as details about each endpoint, including expected inputs and outputs.
